@@ -13,5 +13,4 @@ RUN ssh-keygen -t dsa -f ~/.ssh/id_dsa
 RUN cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 RUN cat ~/.ssh/id_dsa.pub >> ~/.ssh/authorized_keys
 
-ENTRYPOINT ["/etc/init.d/ssh", "start"]
-CMD ["-D"]
+CMD ["/etc/init.d/ssh start -D"]
