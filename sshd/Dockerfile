@@ -13,5 +13,4 @@ RUN apt-get update && apt-get install -y openssh-server && apt-get autoremove
 RUN ssh-keygen -t rsa -f ~/.ssh/id_rsa && ssh-keygen -t dsa -f ~/.ssh/id_dsa
 RUN cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys && cat ~/.ssh/id_dsa.pub >> ~/.ssh/authorized_keys
 
-ENTRYPOINT ["/etc/init.d/ssh", "start"]
-CMD ["/bin/bash", "-d"]
+ENTRYPOINT ["/etc/init.d/ssh", "start", "-d"]
