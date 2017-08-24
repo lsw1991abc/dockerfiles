@@ -7,7 +7,7 @@ USER root
 ARG DISTRO_NAME=hadoop-2.7.4
 
 # COPY $DISTRO_NAME.tar.gz /opt/
-RUN wget -i /opt/$DISTRO_NAME.tar.gz http://apache.fayea.com/hadoop/common/$DISTRO_NAME/$DISTRO_NAME.tar.gz
+RUN wget -o /opt/$DISTRO_NAME.tar.gz http://apache.fayea.com/hadoop/common/$DISTRO_NAME/$DISTRO_NAME.tar.gz
 RUN tar -xzf /opt/$DISTRO_NAME.tar.gz -C /opt/ && rm /opt/$DISTRO_NAME.tar.gz && chown -R root:root /opt/$DISTRO_NAME
 
 # 环境变量
