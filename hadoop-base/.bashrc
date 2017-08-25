@@ -1,5 +1,5 @@
 export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64 
-export HADOOP_HOME=/opt/$DISTRO_NAME 
+export HADOOP_HOME=/opt/hadoop-2.7.4 
 export HADOOP_MAPRED_HOME=$HADOOP_HOME 
 export HADOOP_COMMON_HOME=$HADOOP_HOME 
 export HADOOP_HDFS_HOME=$HADOOP_HOME 

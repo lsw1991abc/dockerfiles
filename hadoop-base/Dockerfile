@@ -4,7 +4,7 @@ LABEL maintainer="lsw1991abc@gmail.com"
 
 USER root
 
-ENV DISTRO_NAME=hadoop-2.7.4
+ARG DISTRO_NAME=hadoop-2.7.4
 
 # COPY $DISTRO_NAME.tar.gz /opt/
 RUN wget -P /opt/ http://apache.fayea.com/hadoop/common/$DISTRO_NAME/$DISTRO_NAME.tar.gz
