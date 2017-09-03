@@ -8,6 +8,10 @@ USER root
 # COPY sources.list /data/sources.list
 # RUN cat /data/sources.list >> /etc/apt/sources.list
 
+# 时间配置为Asia/Shanghai
+COPY ./conf/localtime /etc/localtime
+COPY ./conf/timezone /etc/timezone
+
 RUN apt-get update && apt-get install -y openssh-server && apt-get autoremove
 
 RUN ssh-keygen -t rsa -f ~/.ssh/id_rsa && ssh-keygen -t dsa -f ~/.ssh/id_dsa
