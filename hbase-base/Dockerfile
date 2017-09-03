@@ -1,4 +1,4 @@
-FROM lsw1991abc/sshd:0.1
+FROM lsw1991abc/sshd
 
 LABEL maintainer="lsw1991abc@gmail.com"
 
