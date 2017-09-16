@@ -19,4 +19,4 @@ COPY bootstrap.sh /
 ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["/bootstrap.sh", "-d"]
 
-EXPOSE 16010 16030 50070 8020 8088 9000
+EXPOSE 16010 16030 50070 8020 8088 9000 9083
