@@ -6,8 +6,8 @@ USER root
 
 ARG DISTRO_NAME=hive-2.3.0
 
-COPY apache-$DISTRO_NAME-bin.tar.gz /opt/
-# RUN wget -P /opt/ http://mirrors.hust.edu.cn/apache/hive/$DISTRO_NAME/apache-$DISTRO_NAME-bin.tar.gz
+# COPY apache-$DISTRO_NAME-bin.tar.gz /opt/
+RUN wget -P /opt/ http://mirrors.hust.edu.cn/apache/hive/$DISTRO_NAME/apache-$DISTRO_NAME-bin.tar.gz
 RUN tar -xzf /opt/apache-$DISTRO_NAME-bin.tar.gz -C /opt/ && rm /opt/apache-$DISTRO_NAME-bin.tar.gz && chown -R root:root /opt/apache-$DISTRO_NAME-bin
 
 COPY .bashrc /opt/
