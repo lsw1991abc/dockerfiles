@@ -2,16 +2,14 @@ FROM tomcat:8.5
 
 LABEL maintainer="lsw1991abc@gmail.com"
 
-ARG DISTRO_NAME=2.5.5
+ARG DISTRO_NAME=dubbo-admin
 
 ENV TOMCAT_HOME=/usr/local/tomcat \
 	PROPERTIES=/usr/local/tomcat/webapps/ROOT/WEB-INF/dubbo.properties
 
-WORKDIR $TOMCAT_HOME
-
-RUN rm -rf webapps/
-COPY dubbo-admin-$DISTRO_NAME webapps/ROOT
-RUN rm $PROPERTIES
+RUN rm -rf /usr/local/tomcat/webapps/ 
+RUN wget -P /opt/ https://github.com/lsw1991abc/uploads/blob/$DISTRO_NAME/$DISTRO_NAME.tar.gz 
+RUN tar -xzf /opt/$DISTRO_NAME.tar.gz -C /usr/local/tomcat/webapps/ROOT && rm /opt/$DISTRO_NAME.tar.gz && rm $PROPERTIES
 
 COPY docker-entrypoint.sh /docker-entrypoint.sh
 
