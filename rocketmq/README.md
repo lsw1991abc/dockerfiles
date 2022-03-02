@@ -1,13 +1,3 @@
 # Rocketmq
 
-本地构建镜像
-
-```shell
-docker build --tag lsw1991abc/rocketmq:4.9.2 .
-```
-
-推送到自己的仓库
-
-```shell
-docker push lsw1991abc/rocketmq:4.9.2
-```
+弃用当前配置，推荐使用 [rocketmq-operator](https://github.com/apache/rocketmq-operator)
